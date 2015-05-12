@@ -1,0 +1,269 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    background-color:#080C10;
+    background-image:linear-gradient(top, #100C08 0%, #080C10 51%);
+    background-image:-webkit-linear-gradient(top, #100C08 0%, #080C10 51%);
+    background-image:-ms-linear-gradient(top, #100C08 0%, #080C10 51%);
+    background-image:-webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0, #100C08),
+        color-stop(0.51, #080C10)
+    );
+    background-attachment:fixed;
+    /*font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;*/
+    font-family: 'Calibri Light','Gill Sans','Open Sans',Geneva,Helvetica,Arial,sans-serif;
+    font-size:12px;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    text-transform:uppercase;
+    width:100%;
+    overflow: hidden;
+}
+
+.bardisplay {
+    position: absolute;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    top: 100%;
+    background-color:#080C10;
+}
+
+.barbox {
+    background-color: #4e4e4e;
+    width: 80%;
+    position: absolute;
+    top: 75%;
+    left: 10%;
+}
+
+.barboxhalf {
+    width: 50%;
+    height: 100%;
+    display: inline-block;
+}
+
+.barboxright {
+    /*left: 50%;*/
+    float:right;
+}
+
+.paragraphstext {
+    margin: 10px 10px 10px 10px;
+    font-size: 125%;
+}
+
+/* Portrait layout (default) */
+.app {
+    /* background:url(../img/moonsky.png) no-repeat center top; /* 170px x 200px */
+    position:absolute;             /* position in the center of the screen */
+    left:50%;
+    top:50%;
+    height:100%;                   /* text area height */
+    width:225px;                   /* text area width */
+    text-align:center;
+    padding: 0px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
+    margin:-115px 0px 0px -112px;  /* offset vertical: half of image height and text area height */
+                                   /* offset horizontal: half of text area width */
+    z-index: 2;
+}
+
+.bgfire {
+    background:url(../img/fire.png) no-repeat center top; /* 170px x 200px */
+}
+.bgcold {
+    background:url(../img/cold.png) no-repeat center top; /* 170px x 200px */
+}
+
+.appbar {
+    position:absolute;             /* position in the center of the screen */
+    left:50%;
+    top:40%;
+    height:100%;                   /* text area height */
+    width:300px;                   /* text area width */
+    text-align:center;
+    padding: 200px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
+    margin:-115px 0px 0px -150px;  /* offset vertical: half of image height and text area height */
+                                   /* offset horizontal: half of text area width */
+    z-index: 6;
+}
+
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+    .app {
+        background-position:left center;
+        padding:75px 0px 75px 170px;  /* padding-top + padding-bottom + text area = image height */
+        margin:-90px 0px 0px -198px;  /* offset vertical: half of image height */
+                                      /* offset horizontal: half of image width and text area width */
+    }
+}
+
+.background-images {
+     background:url(../img/moonsky2.png) no-repeat center top;
+     background-size: 100% 100%;
+     position: absolute;
+     left: 0%;
+     top: 0%;
+     width: 100%;
+     height: 100%;
+     z-index: 1;
+}
+
+.background-black {
+    background-color:#080C10;
+    background-image:linear-gradient(top, #100C08 0%, #080C10 51%);
+    background-image:-webkit-linear-gradient(top, #100C08 0%, #080C10 51%);
+    background-image:-ms-linear-gradient(top, #100C08 0%, #080C10 51%);
+    background-image:-webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0, #100C08),
+        color-stop(0.51, #080C10)
+    );
+    background-size: 100% 100%;
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+h1 {
+    font-size:24px;
+    font-weight:normal;
+    margin:0px;
+    overflow:visible;
+    padding:0px;
+    text-align:center;
+}
+
+.login-position {
+    margin-top: 40px;
+}
+
+.whitetext {
+    color: #e0e0e0;
+    font-family: 'Calibri Light','Gill Sans','Open Sans',Geneva,Helvetica,Arial,sans-serif;
+}
+
+.spacingtext {
+    letter-spacing: 4px;
+}
+
+.blacktext {
+    color: #1e1e1e;
+    font-family: 'Calibri Light','Gill Sans','Open Sans',Geneva,Helvetica,Arial,sans-serif;
+}
+
+.largetext {
+    font-size: 20px;
+}
+
+.title {
+    padding-top: 20px;
+}
+
+.event {
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    color:#FFFFFF;
+    font-size:12px;
+    margin:0px 30px;
+    padding:2px 0px;
+}
+
+.event.listening {
+    background-color:#333333;
+    display:block;
+}
+
+.event.received {
+    background-color:#4B946A;
+    display:none;
+}
+
+@keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+@-webkit-keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+.blink {
+    animation:fade 3000ms infinite;
+    -webkit-animation:fade 3000ms infinite;
+}
+
+.bottom {
+    position: absolute;
+    top: calc(-60% - 20px);
+    left: 0px;
+    width: 100%;
+    text-align: center;
+    font-size: 200%;
+
+    background-color: rgba(0,0,0,0.5);
+}
+
+.whiteness {
+    background: url("../img/whiteimage.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color: #ffffff;
+    width: 100vh;
+    height: 100vh;
+    z-index: 999999999;
+}
+
+.transition {
+    -webkit-transition: all 1.0s ease-in-out;  
+    -moz-transition: all 1.0s ease-in-out;  
+    -o-transition: all 1.0s ease-in-out;  
+    -ms-transition: all 1.0s ease-in-out;  
+    transition: all 1.0s ease-in-out; 
+}
+
+.transitionfast {
+    -webkit-transition: all 0.2s ease-in-out;  
+    -moz-transition: all 0.2s ease-in-out;  
+    -o-transition: all 0.2s ease-in-out;  
+    -ms-transition: all 0.2s ease-in-out;  
+    transition: all 0.2s ease-in-out; 
+}
