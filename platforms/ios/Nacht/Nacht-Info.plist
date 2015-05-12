@@ -195,5 +195,18 @@
       <string>UIInterfaceOrientationPortrait</string>
       <string>UIInterfaceOrientationPortraitUpsideDown</string>
     </array>
+    <key>FacebookAppID</key>
+    <string>789010644529178</string>
+    <key>FacebookDisplayName</key>
+    <string>Nacht</string>
+    <key>CFBundleURLTypes</key>
+    <array>
+      <dict>
+        <key>CFBundleURLSchemes</key>
+        <array>
+          <string>fb789010644529178</string>
+        </array>
+      </dict>
+    </array>
   </dict>
 </plist>
